@@ -28,10 +28,8 @@ def submit_student_info():
     }
 
     try:
-        # Validate data before sending
         validate_data(data)
 
-        # Send POST request without timeout
         response = requests.post(url, json=data, headers=headers)
         response.raise_for_status()
 
